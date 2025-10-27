@@ -1,0 +1,48 @@
+### GET /
+GET http://localhost:5000
+
+### Register user
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "pvs@mail.com",
+    "password": "12341234"
+}
+
+
+### login user
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username" : "pvs@mail.com",
+    "password" : "12341234"
+}
+
+### fetch all todos
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYxMjk0NDIxLCJleHAiOjE3NjEzODA4MjF9.iGxoRgeQXCi7uN5-JkrMbJ86PhRr1hqKIEYpXm-f0dI
+
+
+### new todos
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYxMjk0NDIxLCJleHAiOjE3NjEzODA4MjF9.iGxoRgeQXCi7uN5-JkrMbJ86PhRr1hqKIEYpXm-f0dI
+Content-Type: application/json
+
+{
+    "task": "second task omooo"
+}
+
+### update todos
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYxMjk0NDIxLCJleHAiOjE3NjEzODA4MjF9.iGxoRgeQXCi7uN5-JkrMbJ86PhRr1hqKIEYpXm-f0dI
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### delete todos
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYxMjk0NDIxLCJleHAiOjE3NjEzODA4MjF9.iGxoRgeQXCi7uN5-JkrMbJ86PhRr1hqKIEYpXm-f0dI
